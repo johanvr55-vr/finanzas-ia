@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+
+<html lang="es" class="scroll-smooth">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Johan Vásquez | Finanzas Estratégicas & Automatización con IA</title>
+
+  <meta name="description" content="Servicios de contabilidad gerencial, modelado financiero y automatización de procesos empresariales con n8n, AppSheet e Inteligencia Artificial." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+
+    tailwind.config = {
+
+      theme: {
+
+        extend: {
+
+          colors: {
+
+            brand: {
+
+              50: '#f0f9ff',
+
+              100: '#e0f2fe',
+
+              500: '#0284c7',
+
+              600: '#0369a1',
+
+              700: '#075985',
+
+              800: '#0c4a6e',
+
+              900: '#082f49',
+
+            },
+
+            accent: {
+
+              500: '#10b981',
+
+              600: '#059669',
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+
+    body {
+
+      font-family: 'Plus Jakarta Sans', sans-serif;
+
+    }
+
+  </style>
+
+</head>
+
+<body class="bg-slate-900 text-slate-100 antialiased selection:bg-brand-500 selection:text-white">
+
+
+  <!-- NAVEGACIÓN -->
+
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-900/80 border-b border-slate-800">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+
+      <a href="#" class="flex items-center gap-3">
+
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-accent-500 flex items-center justify-center font-bold text-white shadow-lg shadow-brand-500/20">
+
+          JV
+
+        </div>
+
+        <div>
+
+          <span class="text-xl font-bold tracking-tight text-white block">Johan Vásquez</span>
+
+          <span class="text-xs text-slate-400 block -mt-1">Contabilidad & Automatización IA</span>
+
+        </div>
+
+      </a>
+
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+
+        <a href="#servicios" class="hover:text-white transition">Servicios</a>
+
+        <a href="#ventajas" class="hover:text-white transition">Por qué elegirme</a>
+
+        <a href="#tecnologias" class="hover:text-white transition">Tecnología</a>
+
+        <a href="#sobre-mi" class="hover:text-white transition">Sobre mí</a>
+
+      </nav>
+
+
+      <div class="flex items-center gap-4">
+
+        <a href="https://wa.me/18296895071?text=Hola%20Johan,%20me%20gustar%C3%ADa%20agendar%20una%20consulta%20sobre%20tus%20servicios"
+
+           target="_blank"
+
+           class="inline-flex items-center gap-2 bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-500 text-white font-semibold px-5 py-2.5 rounded-xl shadow-lg shadow-accent-500/25 transition transform hover:-translate-y-0.5 text-sm">
+
+          <span>WhatsApp Directo</span>
+
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.299.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.42-.099.825zm-3.392-12.416c-5.514 0-10 4.486-10 10 0 1.954.564 3.78 1.541 5.334l-1.631 5.966 6.136-1.61c1.503.882 3.245 1.376 4.954 1.376 5.514 0 10-4.486 10-10s-4.486-10-10-10z"/></svg>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- HERO SECTION -->
+
+  <section class="relative pt-12 pb-24 lg:pt-20 lg:pb-32 overflow-hidden">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-3xl mx-auto">
+
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-700 bg-slate-800/80 text-xs text-sky-300 mb-6">
+
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+
+          <span>+20 Años de Experiencia Contable + Automatización e Inteligencia Artificial</span>
+
+        </div>
+
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight mb-6">
+
+          Convierte tu contabilidad en un sistema <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-blue-500 to-emerald-400">automatizado y sin errores</span>
+
+        </h1>
+
+
+        <p class="text-lg sm:text-xl text-slate-300 leading-relaxed mb-10">
+
+          Elimina la digitación manual de facturas, concilia cuentas en minutos y ten reportes financieros en tiempo real conectando hojas de cálculo, n8n, AppSheet e IA.
+
+        </p>
+
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+
+          <a href="#contacto" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-sky-600 hover:bg-sky-500 font-semibold text-white shadow-xl shadow-sky-600/30 transition transform hover:-translate-y-0.5">
+
+            <span>Solicitar Diagnóstico Gratuito</span>
+
+          </a>
+
+          <a href="#servicios" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-slate-700 hover:bg-slate-800 font-semibold text-slate-200 transition">
+
+            Ver Servicios Especializados
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- MÉTRICAS / HIGHLIGHTS -->
+
+      <div class="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto">
+
+        <div class="p-6 rounded-2xl bg-slate-800/50 border border-slate-700/60 text-center backdrop-blur-sm">
+
+          <div class="text-3xl sm:text-4xl font-extrabold text-sky-400 mb-1">+20</div>
+
+          <div class="text-xs sm:text-sm text-slate-400 font-medium">Años de Trayectoria Contable</div>
+
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-800/50 border border-slate-700/60 text-center backdrop-blur-sm">
+
+          <div class="text-3xl sm:text-4xl font-extrabold text-emerald-400 mb-1">-70%</div>
+
+          <div class="text-xs sm:text-sm text-slate-400 font-medium">Tiempo en Digitación Manual</div>
+
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-800/50 border border-slate-700/60 text-center backdrop-blur-sm">
+
+          <div class="text-3xl sm:text-4xl font-extrabold text-sky-400 mb-1">100%</div>
+
+          <div class="text-xs sm:text-sm text-slate-400 font-medium">Cumplimiento Fiscal y Rigor Técnico</div>
+
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-800/50 border border-slate-700/60 text-center backdrop-blur-sm">
+
+          <div class="text-3xl sm:text-4xl font-extrabold text-emerald-400 mb-1">24/7</div>
+
+          <div class="text-xs sm:text-sm text-slate-400 font-medium">Flujos y Alertas en Piloto Automático</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SERVICIOS -->
+
+  <section id="servicios" class="py-20 bg-slate-950/60 border-t border-slate-800">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-2xl mx-auto mb-16">
+
+        <h2 class="text-xs uppercase tracking-widest font-bold text-sky-400 mb-2">Servicios Profesionales</h2>
+
+        <p class="text-3xl sm:text-4xl font-bold text-white">Soluciones que integran finanzas sólidas con automatización inteligente</p>
+
+      </div>
+
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-sky-500/50 transition duration-300 flex flex-col justify-between">
+
+          <div>
+
+            <h3 class="text-xl font-bold text-white mb-3">Automatización de Facturas & OCR con IA</h3>
+
+            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+
+              Recepción automática de comprobantes y facturas por correo o mensajería, extracción inteligente de datos con modelos de visión/OCR y registro directo en hojas de cálculo o bases de datos.
+
+            </p>
+
+          </div>
+
+          <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800 pt-4">
+
+            <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Cero digitación manual de recibos</li>
+
+            <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Clasificación tributaria inmediata</li>
+
+            <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Detección de duplicados</li>
+
+          </ul>
+
+        </div>
+
+
+        <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-sky-500/50 transition duration-300 flex flex-col justify-between">
+
+          <div>
+
+            <h3 class="text-xl font-bold text-white mb-3">Aplicaciones a Medida (AppSheet)</h3>
+
+            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+
+              Desarrollo de aplicaciones móviles y de escritorio sin código para control de inventarios, compras, caja chica y autorizaciones de pago sin incurrir en licencias de software costosas.
+
+            </p>
+
+          </div>
+
+          <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800 pt-4">
+
+            <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Acceso desde PC o teléfono móvil</li>
+
+            <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Roles y permisos para empleados</li>
+
+            <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Sincronización en tiempo real</li>
+
+          </ul>
+
+        </div>
+
+
+        <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-sky-500/50 transition duration-300 flex flex-col justify-between">
+
+          <div>
+
+            <h3 class="text-xl font-bold text-white mb-3">Dirección Contable & Estados Financieros</h3>
+
+            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+
+              Elaboración rigurosa de balances generales, estados de resultados, presupuestos, flujo de caja y auditoría preventiva con base en más de dos décadas de experiencia.
+
+            </p>
+
+          </div>
+
+          <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800 pt-4">
+
+            <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Cumplimiento de normas tributarias</li>
+
+            <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Análisis de rentabilidad y costos</li>
+
+            <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Informes listos para socios y bancos</li>
+
+          </ul>
+
+        </div>
+
+
+        <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-sky-500/50 transition duration-300 flex flex-col justify-between">
+
+          <div>
+
+            <h3 class="text-xl font-bold text-white mb-3">Modelos Financieros en Excel & Sheets</h3>
+
+            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+
+              Construcción de plantillas corporativas con macros (VBA), fórmulas dinámicas avanzadas y paneles de control interactivos adaptados a la dinámica real de tu empresa.
+
+            </p>
+
+          </div>
+
+          <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800 pt-4">
+
+            <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Fórmulas dinámicas y limpias</li>
+
+            <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Automatización con Macros / Apps Script</li>
+
+            <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Tableros visuales de indicadores</li>
+
+          </ul>
+
+        </div>
+
+
+        <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-sky-500/50 transition duration-300 flex flex-col justify-between">
+
+          <div>
+
+            <h3 class="text-xl font-bold text-white mb-3">Integraciones de Procesos (n8n & Make)</h3>
+
+            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+
+              Conexión entre correos electrónicos, pasarelas de pago y bases de datos para ejecutar tareas repetitivas de forma automática, continua y desatendida.
+
+            </p>
+
+          </div>
+
+          <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800 pt-4">
+
+            <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Flujos autohospedados o en la nube</li>
+
+            <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Alertas por WhatsApp / Telegram / Email</li>
+
+            <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Registro de transacciones 24/7</li>
+
+          </ul>
+
+        </div>
+
+
+        <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-sky-500/50 transition duration-300 flex flex-col justify-between">
+
+          <div>
+
+            <h3 class="text-xl font-bold text-white mb-3">Auditoría & Rediseño de Procesos</h3>
+
+            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+
+              Diagnóstico de cómo opera tu empresa para identificar cuellos de botella, fugas de recursos y tareas manuales que pueden simplificarse de inmediato.
+
+            </p>
+
+          </div>
+
+          <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800 pt-4">
+
+            <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Mapa de procesos claro y accionable</li>
+
+            <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Plan de digitalización gradual</li>
+
+            <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Capacitación a tu equipo interno</li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- POR QUÉ ELEGIRME -->
+
+  <section id="ventajas" class="py-20 bg-slate-900">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+        <div>
+
+          <h2 class="text-xs uppercase tracking-widest font-bold text-emerald-400 mb-2">Diferenciador Clave</h2>
+
+          <p class="text-3xl sm:text-4xl font-bold text-white mb-6">El balance exacto entre rigor contable y tecnología de vanguardia</p>
+
+          <p class="text-slate-300 text-base leading-relaxed mb-6">
+
+            La mayoría de desarrolladores no dominan la normativa tributaria ni las conciliaciones, y la mayoría de contadores no construyen flujos de automatización con IA. Mi propuesta une ambos mundos.
+
+          </p>
+
+          <div class="space-y-4">
+
+            <div class="flex items-start gap-4">
+
+              <div class="w-8 h-8 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center flex-shrink-0 mt-1 font-bold">1</div>
+
+              <div>
+
+                <h4 class="font-semibold text-white">Criterio Financiero Profesional</h4>
+
+                <p class="text-sm text-slate-400">Licenciado en Contabilidad (UASD) con más de 20 años dirigiendo departamentos contables y administrativos.</p>
+
+              </div>
+
+            </div>
+
+            <div class="flex items-start gap-4">
+
+              <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 mt-1 font-bold">2</div>
+
+              <div>
+
+                <h4 class="font-semibold text-white">Soluciones a la Medida, sin Costos Ocultos</h4>
+
+                <p class="text-sm text-slate-400">Aprovechamos herramientas como Google Workspace, Excel y n8n sin atarte a software costoso e innecesario.</p>
+
+              </div>
+
+            </div>
+
+            <div class="flex items-start gap-4">
+
+              <div class="w-8 h-8 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center flex-shrink-0 mt-1 font-bold">3</div>
+
+              <div>
+
+                <h4 class="font-semibold text-white">Confidencialidad y Seguridad Total</h4>
+
+                <p class="text-sm text-slate-400">Tratamiento ético y protegido de toda la información tributaria y bancaria de tu negocio.</p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="p-8 rounded-3xl bg-slate-950 border border-slate-800 shadow-2xl">
+
+          <h3 class="text-lg font-bold text-white mb-6 flex items-center gap-2">
+
+            <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+
+            Comparativa de Valor
+
+          </h3>
+
+          <div class="space-y-4 text-sm">
+
+            <div class="p-4 rounded-xl bg-slate-900 border border-rose-500/30">
+
+              <div class="text-rose-400 font-semibold mb-1">Método Tradicional</div>
+
+              <p class="text-slate-400 text-xs">Digitación manual de facturas, retrasos en conciliaciones y reportes financieros desfasados.</p>
+
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-900 border border-emerald-500/30">
+
+              <div class="text-emerald-400 font-semibold mb-1">Sistema Automatizado</div>
+
+              <p class="text-slate-300 text-xs">Lectura con IA en segundos, validación cruzada automática y estados financieros al día.</p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SOBRE MÍ -->
+
+  <section id="sobre-mi" class="py-20 bg-slate-950">
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="p-8 sm:p-12 rounded-3xl bg-slate-900 border border-slate-800 flex flex-col md:flex-row gap-8 items-center">
+
+        <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl bg-gradient-to-tr from-sky-600 to-emerald-500 flex items-center justify-center font-extrabold text-4xl text-white flex-shrink-0 shadow-xl shadow-sky-500/20">
+
+          JVR
+
+        </div>
+
+        <div>
+
+          <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-1 block">Perfil Profesional</span>
+
+          <h3 class="text-2xl sm:text-3xl font-bold text-white mb-4">Johan Manuel Vásquez Rondón</h3>
+
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
+
+            Licenciado en Contabilidad por la Universidad Autónoma de Santo Domingo (UASD), con más de dos décadas de experiencia liderando la administración y finanzas en hospitales, instituciones educativas y empresas privadas.
+
+          </p>
+
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+
+            Construyo infraestructuras financieras modernas: sistemas que integran plataformas no-code e inteligencia artificial para que dueños de empresas y equipos operativos obtengan claridad financiera y eliminen el trabajo repetitivo.
+
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4 text-xs font-semibold text-slate-300">
+
+            <span>📍 Cotuí, Sánchez Ramírez, Rep. Dominicana</span>
+
+            <span>•</span>
+
+            <span class="text-sky-400">Disponible para proyectos locales e internacionales</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACTO -->
+
+  <section id="contacto" class="py-20 bg-slate-900">
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+      <h2 class="text-xs uppercase tracking-widest font-bold text-sky-400 mb-3">Empieza Hoy Mismo</h2>
+
+      <h3 class="text-3xl sm:text-4xl font-extrabold text-white mb-6">¿Listo para optimizar tus procesos y finanzas?</h3>
+
+      <p class="text-slate-300 text-base sm:text-lg mb-10 max-w-2xl mx-auto">
+
+        Conversemos sobre los flujos de tu empresa. Analizaremos qué tareas manuales puedes automatizar de inmediato.
+
+      </p>
+
+
+      <div class="p-8 rounded-3xl bg-slate-950 border border-slate-800 shadow-2xl text-left max-w-xl mx-auto">
+
+        <form onsubmit="event.preventDefault(); window.open('https://wa.me/18296895071?text=' + encodeURIComponent('Hola Johan, mi nombre es ' + document.getElementById('name').value + '. Servicio de interés: ' + document.getElementById('service').value + '. Mensaje: ' + document.getElementById('msg').value), '_blank');" class="space-y-4">
+
+          <div>
+
+            <label for="name" class="block text-xs font-semibold text-slate-300 mb-1">Nombre o Empresa</label>
+
+            <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-sky-500 text-sm" placeholder="Ej. Juan Pérez / Empresa SRL" />
+
+          </div>
+
+          <div>
+
+            <label for="service" class="block text-xs font-semibold text-slate-300 mb-1">Servicio de Interés</label>
+
+            <select id="service" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-sky-500 text-sm">
+
+              <option value="Automatización de Facturas e IA">Automatización de Facturas con OCR e IA</option>
+
+              <option value="Desarrollo de App en AppSheet">Desarrollo de Aplicación a Medida (AppSheet)</option>
+
+              <option value="Contabilidad y Estados Financieros">Contabilidad General & Estados Financieros</option>
+
+              <option value="Plantilla / Modelo en Excel o Sheets">Modelos y Macros en Excel / Sheets</option>
+
+              <option value="Consultoría Integral">Consultoría y Diagnóstico de Procesos</option>
+
+            </select>
+
+          </div>
+
+          <div>
+
+            <label for="msg" class="block text-xs font-semibold text-slate-300 mb-1">Breve descripción de tu necesidad</label>
+
+            <textarea id="msg" rows="3" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-sky-500 text-sm" placeholder="Cuéntame qué proceso te gustaría automatizar o mejorar..."></textarea>
+
+          </div>
+
+          <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-500 text-white font-bold text-base shadow-lg shadow-emerald-500/25 transition">
+
+            Enviar Mensaje por WhatsApp
+
+          </button>
+
+        </form>
+
+
+        <div class="mt-6 pt-6 border-t border-slate-800 text-center text-xs text-slate-400 space-y-1">
+
+          <div>Contacto directo:</div>
+
+          <div class="text-slate-200 font-medium">📞 +1 (829) 689-5071 | ✉️ jvr.aiautomation@gmail.com</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer class="py-8 bg-slate-950 border-t border-slate-900 text-center text-xs text-slate-500">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+
+      <div>© 2026 Johan Manuel Vásquez Rondón. Todos los derechos reservados.</div>
+
+      <div class="flex items-center gap-6">
+
+        <a href="mailto:jvr.aiautomation@gmail.com" class="hover:text-slate-300 transition">Email</a>
+
+        <a href="https://wa.me/18296895071" target="_blank" class="hover:text-slate-300 transition">WhatsApp</a>
+
+        <a href="https://www.upwork.com/users/~012f20d869cef7c07c" target="_blank" class="hover:text-slate-300 transition">Upwork</a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+</body>
+
+</html>
+
